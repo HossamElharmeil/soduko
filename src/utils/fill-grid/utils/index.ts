@@ -1,0 +1,5 @@
+export { default as isFullGrid } from './is-full-grid'
+export { default as isInCol } from './is-in-col'
+export { default as isInRow } from './is-in-row'
+export { default as isInSquare } from './is-in-square'
+export { default as shuffle } from './shuffle'

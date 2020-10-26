@@ -1,8 +1,8 @@
-import { GRID, NUMBERS } from 'typings'
+import { GRID, GRID_INDEX, NUMBERS } from 'typings'
 
 interface IInput {
   grid: GRID
-  row: number
+  row: GRID_INDEX
   value: NUMBERS
 }
 
