@@ -1,14 +1,15 @@
 import React from 'react'
-import { GRID_INDEX } from 'typings'
 import { Container } from './styles'
 
 interface IProps {
-  colIndex: GRID_INDEX
-  rowIndex: GRID_INDEX
+  colIndex: number
+  rowIndex: number
 }
 
-const Block: React.FC<IProps> = ({ colIndex, rowIndex }) => {
-  return <Container data-cy={`block-${rowIndex}-${colIndex}`} />
+const Block: React.FC<IProps> = ({ colIndex, rowIndex, children }) => {
+  return (
+    <Container data-cy={`block-${rowIndex}-${colIndex}`}>{children}</Container>
+  )
 }
 
 export default Block
