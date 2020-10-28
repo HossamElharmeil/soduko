@@ -1,2 +1,2 @@
-export * from './fill-grid'
-export * from './create-grid'
+export { default as fillGrid } from './fill-grid'
+export { default as createGrid } from './create-grid'
