@@ -1,3 +1,5 @@
+export type BLOCK_COORDS = [GRID_INDEX, GRID_INDEX]
+
 export type GRID = [ROW, ROW, ROW, ROW, ROW, ROW, ROW, ROW, ROW]
 
 export type GRID_INDEX = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8

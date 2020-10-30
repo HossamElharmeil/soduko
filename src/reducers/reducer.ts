@@ -13,6 +13,12 @@ function reducer(state = initialState, action: AnyAction): IReducer {
         grid: createGrid(),
       }
 
+    case types.SELECT_BLOCK:
+      return {
+        ...state,
+        selectedBlock: action.block,
+      }
+
     default:
       return state
   }
