@@ -16,10 +16,6 @@ interface IState {
 }
 
 const Block: React.FC<IProps> = ({ colIndex, rowIndex }) => {
-  function handleClick() {
-    if (!state.isActive) dispatch(selectBlockAction([rowIndex, colIndex]))
-  }
-
   const dispatch = useDispatch<Dispatch<AnyAction>>()
 
   const state = useSelector<IReducer, IState>(({ grid, selectedBlock }) => ({
@@ -28,6 +24,11 @@ const Block: React.FC<IProps> = ({ colIndex, rowIndex }) => {
       ? selectedBlock[0] === rowIndex && selectedBlock[1] === colIndex
       : false,
   }))
+
+  function handleClick() {
+    if (!state.isActive) dispatch(selectBlockAction([rowIndex, colIndex]))
+  }
+
   return (
     <Container
       active={state.isActive}

@@ -1695,6 +1695,11 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-hook-mousetrap@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-hook-mousetrap/-/react-hook-mousetrap-2.0.0.tgz#41f9aaa18b8f6f0323a431aac95b7472e3f20470"
+  integrity sha512-P2ciXdvykHNmvFq595E2ksy+np7bxWDC9BFCamk9r1+c4wa0CT9PjRLicyfiDNkDftnZ6QsdHrH35eXm11+5Vw==
+
 "@types/react-native@*":
   version "0.63.25"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.63.25.tgz#a08bbe17a75cce993f52655a8fe75f30bf77e965"
@@ -7064,6 +7069,11 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.5, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
+mousetrap@^1.6.2:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/mousetrap/-/mousetrap-1.6.5.tgz#8a766d8c272b08393d5f56074e0b5ec183485bf9"
+  integrity sha512-QNo4kEepaIBwiT8CDhP98umTetp+JNfQYBWvC1pc6/OAibuXtRcxZ58Qz8skvEHYvURne/7R8T5VoOI7rDsEUA==
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -8807,6 +8817,13 @@ react-error-overlay@^6.0.7:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
   integrity sha512-TAv1KJFh3RhqxNvhzxj6LeT5NWklP6rDr2a0jaTfsZ5wSZWHOGeqQyejUp3xxLfPt2UpyJEcVQB/zyPcmonNFA==
+
+react-hook-mousetrap@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-hook-mousetrap/-/react-hook-mousetrap-2.0.4.tgz#fd7a61306d852b6b03942deb21a2bce0b1b2af8c"
+  integrity sha512-T/TdV1BgfvCsvlz504CFc1bYHaOgnor61cA1c0OQHfsxNlTbBMtk+NPefeenavP7SGcxVNTRlNmq2T0On+Q+zg==
+  dependencies:
+    mousetrap "^1.6.2"
 
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.13.1"
