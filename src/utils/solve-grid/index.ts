@@ -1,15 +1,14 @@
-import { GRID, GRID_INDEX, NUMBERS, SQUARE } from 'typings'
-import { isFullGrid, isInCol, isInRow, isInSquare } from 'utils'
-import identifySquare from '../indetify-square'
-import { shuffle } from './utils'
+import global from 'global'
+import { GRID, GRID_INDEX, NUMBERS } from 'typings'
+import { identifySquare, isFullGrid, isInCol, isInRow, isInSquare } from 'utils'
 
 const numbers: NUMBERS[] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 /**
- * A backtracking/recursive function to check all the possible combinations of numbers until a solution is found
- * @param grid 9*9 soduko grid
+ * A recursive function to check all the possible combinations of numbers untill a solution si found
+ * @param grid A 9x9 array containing values from 0-9
  */
-function fillGrid(grid: GRID) {
+function solveGrid(grid: GRID) {
     let row: GRID_INDEX = 0
     let col: GRID_INDEX = 0
 
@@ -18,28 +17,24 @@ function fillGrid(grid: GRID) {
         col = (i % 9) as GRID_INDEX
 
         if (grid[row][col] === 0) {
-            shuffle(numbers)
-            const square: SQUARE = identifySquare({ col, grid, row })
-
             for (let value of numbers) {
+                const square = identifySquare({ col, grid, row })
                 if (
                     !isInRow({ grid, row, value }) &&
                     !isInCol({ grid, col, value }) &&
                     !isInSquare({ square, value })
                 ) {
                     grid[row][col] = value
-
                     if (isFullGrid({ grid })) {
-                        return true
-                    } else if (fillGrid(grid)) {
-                        return true
-                    }
+                        global.counter++
+                        break
+                    } else if (solveGrid(grid)) return true
                 }
             }
-            break
         }
     }
+
     grid[row][col] = 0
 }
 
-export default fillGrid
+export default solveGrid
